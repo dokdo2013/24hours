@@ -61,4 +61,25 @@ export const projects: Project[] = [
     startDate: null,
     endDate: null,
   },
+  {
+    priority: 6,
+    name: "VMusic.kr - 버츄얼 크리에이터 오리지널/커버곡 감상 플랫폼",
+    description:
+      "버츄얼 크리에이터의 오리지널곡, 커버곡을 모아서 감상할 수 있는 플랫폼",
+    logoUrl: "https://placehold.co/400",
+    tags: ["Next.js"],
+    status: "standby",
+    startDate: null,
+    endDate: null,
+  },
+  {
+    priority: 7,
+    name: "숏.닷컴 - 한글로만 이루어진 URL 단축 서비스",
+    description: "긴 URL을 한글로만 이루어진 URL로 단축해주는 서비스",
+    logoUrl: "https://placehold.co/400",
+    tags: ["Remix", "Serverless Framework"],
+    status: "standby",
+    startDate: null,
+    endDate: null,
+  },
 ];
