@@ -55,13 +55,25 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
+          <div className="flex justify-center flex-wrap gap-3 mb-0.5">
+            <a
+              href="https://haenu.dev"
+              className="text-sm leading-6 text-gray-300 hover:text-gray-200"
+            >
+              Service Status
+            </a>
+
+            <a
+              href="https://github.com/dokdo2013/24hours"
+              className="text-sm leading-6 text-gray-300 hover:text-gray-200"
+            >
+              Project Repository
+            </a>
+          </div>
+
           <p className="text-center text-xs leading-5 text-gray-400">
             &copy; 2024{" "}
-            <a
-              href="https://github.com/dokdo2013"
-              target="_blank"
-              className="hover:underline"
-            >
+            <a href="https://github.com/dokdo2013" target="_blank">
               @dokdo2013
             </a>
             , All rights reserved.
