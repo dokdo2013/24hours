@@ -58,6 +58,7 @@ export default function Footer() {
           <div className="flex justify-center flex-wrap gap-3 mb-0.5">
             <a
               href="https://haenu.dev"
+              target="_blank"
               className="text-sm leading-6 text-gray-300 hover:text-gray-200"
             >
               Service Status
@@ -65,6 +66,7 @@ export default function Footer() {
 
             <a
               href="https://github.com/dokdo2013/24hours"
+              target="_blank"
               className="text-sm leading-6 text-gray-300 hover:text-gray-200"
             >
               Project Repository
