@@ -42,8 +42,9 @@ export const projects: Project[] = [
   },
   {
     priority: 4,
-    name: "Haenu IDP (private)",
-    description: "사이드 프로젝트 배포 및 관리를 위한 내부 포털",
+    name: "Zoomies (private) - 개인 용도로 만드는 IDP",
+    description:
+      "사이드 프로젝트 배포 및 관리를 위한 내부 포털 (Platform Engineering)",
     logoUrl: "https://placehold.co/400",
     tags: ["Next.js App Router", "Turborepo"],
     status: "standby",
@@ -75,7 +76,7 @@ export const projects: Project[] = [
     priority: 7,
     name: "VMusic.kr - 버츄얼 크리에이터 오리지널/커버곡 감상 플랫폼",
     description:
-      "버츄얼 크리에이터의 오리지널곡, 커버곡을 모아서 감상할 수 있는 플랫폼",
+      "버츄얼 크리에이터의 오리지널곡, 커버곡을 모아서 감상할 수 있는 플랫폼 (기존 서비스 리뉴얼)",
     logoUrl: "https://placehold.co/400",
     tags: ["Next.js"],
     status: "standby",
@@ -88,6 +89,17 @@ export const projects: Project[] = [
     description: "긴 URL을 한글로만 이루어진 URL로 단축해주는 서비스",
     logoUrl: "https://placehold.co/400",
     tags: ["Remix", "Serverless Framework"],
+    status: "standby",
+    startDate: null,
+    endDate: null,
+  },
+  {
+    priority: 9,
+    name: "bash.plus - 개발자 컨퍼러스 영상 큐레이션 서비스",
+    description:
+      "한국어로 된 개발자 컨퍼런스 영상을 모아서 큐레이션하는 서비스",
+    logoUrl: "https://placehold.co/400",
+    tags: ["Zustand", "Serverless Framework"],
     status: "standby",
     startDate: null,
     endDate: null,
