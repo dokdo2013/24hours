@@ -43,7 +43,7 @@ export default function StackedLists() {
       {projects.map((project) => (
         <li
           key={project.description}
-          className="flex justify-between gap-x-6 py-5"
+          className="flex justify-between gap-x-6 py-5 hover:bg-gray-800/20 cursor-pointer"
         >
           <div className="flex min-w-0 gap-x-4">
             <img
