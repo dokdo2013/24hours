@@ -1,4 +1,4 @@
-import { Project, projects } from "../constants/projects";
+import { Project, projects } from "../../constants/projects";
 
 const ProjectStatus = (
   status: Project["status"],
