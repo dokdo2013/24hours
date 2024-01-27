@@ -9,16 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@24hours/types": "workspace:*",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@sentry/nextjs": "^7.98.0",
     "@types/classnames": "^2.3.1",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "swr": "^2.2.4",
-    "@24hours/types": "workspace:*"
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "@types/node": "^20",
