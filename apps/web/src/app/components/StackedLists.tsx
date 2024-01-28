@@ -1,4 +1,6 @@
-import { Project, projects } from "../../constants/projects";
+import Link from "next/link";
+import { projects } from "../../constants/projects";
+import { Project } from "@24hours/types/project";
 
 const ProjectStatus = (
   status: Project["status"],
@@ -42,44 +44,49 @@ export default function StackedLists() {
     <ul role="list" className="divide-y divide-gray-800 p-4 xl:p-0">
       {projects.map((project) => (
         <li
+          className=" hover:bg-gray-800/20 cursor-pointer"
           key={project.description}
-          className="flex justify-between gap-x-6 py-5 hover:bg-gray-800/20 cursor-pointer"
         >
-          <div className="flex min-w-0 gap-x-4">
-            <img
-              className="h-12 w-12 flex-none rounded-full bg-gray-800"
-              src={project.logoUrl}
-              alt=""
-            />
-            <div className="min-w-0 flex-auto">
-              <p className="text-sm font-semibold leading-6 text-white">
-                {project.name}
-              </p>
-              <p className="mt-1 truncate text-xs leading-5 text-gray-400">
-                {project.description}
-              </p>
+          <Link
+            href={`/project/${project.shortName}`}
+            className="flex justify-between gap-x-6 px-2 py-5"
+          >
+            <div className="flex min-w-0 gap-x-4">
+              <img
+                className="h-12 w-12 flex-none rounded-full bg-gray-800"
+                src={project.logoUrl}
+                alt=""
+              />
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-white">
+                  {project.name}
+                </p>
+                <p className="mt-1 truncate text-xs leading-5 text-gray-400">
+                  {project.description}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-            <div className="flex gap-1">
-              {project.tags
-                ? project.tags.map((tag, i) => (
-                    <span
-                      key={`${tag}.${i}`}
-                      className="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20"
-                    >
-                      <span className="select-none mr-1">#</span>
-                      {tag}
-                    </span>
-                  ))
-                : null}
+            <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+              <div className="flex gap-1">
+                {project.tags
+                  ? project.tags.map((tag, i) => (
+                      <span
+                        key={`${tag}.${i}`}
+                        className="inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-400/20"
+                      >
+                        <span className="select-none mr-1">#</span>
+                        {tag}
+                      </span>
+                    ))
+                  : null}
+              </div>
+              {ProjectStatus(
+                project.status,
+                project?.startDate,
+                project?.endDate
+              )}
             </div>
-            {ProjectStatus(
-              project.status,
-              project?.startDate,
-              project?.endDate
-            )}
-          </div>
+          </Link>
         </li>
       ))}
     </ul>
