@@ -24,7 +24,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
 
       <main className="relative isolate pt-20">
         <section className="border-b-[1px] border-gray-500/20 py-8">
-          <div className="max-w-5xl mx-auto my-0 flex justify-between items-center">
+          <div className="max-w-5xl mx-auto my-0 flex justify-between items-center flex-col sm:flex-row px-4 gap-4 sm:gap-0">
             <div className="flex items-center gap-4">
               <img src={project.logoUrl} alt={project.name} className="w-12" />
               <div className="flex flex-col items-start">
@@ -67,7 +67,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
 
         <section className="mt-10 py-8">
           <div className="max-w-5xl mx-auto my-0">
-            <div className="flex flex-col gap-5 text-center">
+            <div className="flex flex-col gap-5 text-center px-4">
               <h2 className="text-white text-xl font-semibold">잠깐!</h2>
               <p className="text-white font-thin">
                 아직 내부 콘텐츠는 준비 중이에요. 조금만 더 기다려주세요
