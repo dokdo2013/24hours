@@ -11,13 +11,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  modal,
   children,
 }: {
+  modal: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <html lang="ko" className="bg-gray-900">
       <body className={classNames(pretendard.variable, "font-sans")}>
+        {modal}
+
         <div className="bg-gray-900 min-h-screen">{children}</div>
       </body>
     </html>

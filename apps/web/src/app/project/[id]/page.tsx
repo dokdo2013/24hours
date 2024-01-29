@@ -3,7 +3,14 @@ import { projects } from "@/constants/projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const getProject = async (slug: string) => {
+export const getProject = async (slug: string) => {
+  // FIXME: Change to API call (NestJS)
+  const project = projects.find((project) => project.shortName === slug);
+
+  return project;
+};
+
+export const getProjectClient = (slug: string) => {
   // FIXME: Change to API call (NestJS)
   const project = projects.find((project) => project.shortName === slug);
 
